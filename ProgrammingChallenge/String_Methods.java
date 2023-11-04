@@ -2,10 +2,10 @@ package ProgrammingChallenge;
 
 public class String_Methods {
     public static void main(String[] args) {
-        String FirstName = "John Carl ";
+          String FirstName = "John Carl ";
+        String MiddleName = "Miguel";
         String LastName = "Balatan";
-        char result = LastName.charAt(1);
-        System.out.println(result);
-        System.out.println("Fullname: " + FirstName.concat(LastName));
+        char result = MiddleName.charAt(0);
+        System.out.println("Fullname: " + FirstName + result + " " + LastName);
     }
 }
