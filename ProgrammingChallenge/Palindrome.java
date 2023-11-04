@@ -2,13 +2,12 @@ package ProgrammingChallenge;
 import java.util.Scanner;
 public class Palindrome {
     public static void main(String[] args) {
-
         Scanner qwerty = new Scanner(System.in);
-        String name = qwerty.nextLine();
+        System.out.println("Please enter any word: ");
+        String word = qwerty.nextLine();
 
-        StringBuilder discord = new StringBuilder(name).reverse();
-
-        System.out.println(name.contentEquals(discord));
+        StringBuilder discord = new StringBuilder(word).reverse();
+        String result = word.equals(discord.toString()) ? "a Palindrome" : "not a Palindrome";
+        System.out.println("Your input word is " + result);
     }
 }
-
