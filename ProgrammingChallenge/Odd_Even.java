@@ -9,17 +9,17 @@ public class Odd_Even {
         System.out.println("Enter any number: ");
 int number= scanner.nextInt();
 if(number == 0){
-    System.out.println("The number is zero.");
+    System.out.println("The number " +number + " is zero.");
 } else if(number > 0){
-    System.out.println("The number is positive.");
+    System.out.println("The number " +number +  " is positive.");
 }else {
-    System.out.println("The number is negative.");
+    System.out.println("The number" +number + " is negative.");
 }
 if (number %2 == 0){
-            System.out.println("The number is even");
+            System.out.println("The number " +number +  " is even");
 
         }else{
-            System.out.println("The number is odd");
+            System.out.println("The number " +number + "is odd");
         }
 }
 
