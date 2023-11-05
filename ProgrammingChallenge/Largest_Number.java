@@ -24,7 +24,7 @@ public class Largest_Number {
             if (number3 > number) {
                 number = number3;
             }
-            System.out.println("The larger number is: " + number);
+            System.out.println("The largest number is: " + number);
         }
     }
 }
