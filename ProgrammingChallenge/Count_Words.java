@@ -5,18 +5,23 @@ public class Count_Words {
     public static void main(String[] args) {
         Scanner qwerty = new Scanner(System.in);
 
-        System.out.print("Enter a sentence: ");
+        System.out.print("Enter any word or a sentence: ");
         String input = qwerty.nextLine();
 
-        int wordCount = countWords(input);
-        System.out.println("Number of words: " + wordCount);
-
+        int wordCount = countWordsWithoutNumbers(input);
+        System.out.println("Number of words (excluding numbers) in your input: " + wordCount);
     }
 
-    private static int countWords(String input) {
+    private static int countWordsWithoutNumbers(String input) {
         String[] words = input.split(" ");
-        return words.length;
+        int count = 0;
 
+        for (String word : words) {
+            if (!word.matches(".*\\d.*")) { // Check if the word contains any digit
+                count++;
+            }
+        }
+
+        return count;
     }
-
 }
