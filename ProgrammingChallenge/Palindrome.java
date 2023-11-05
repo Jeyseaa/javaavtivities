@@ -7,7 +7,7 @@ public class Palindrome {
         String word = qwerty.nextLine();
 
         StringBuilder discord = new StringBuilder(word).reverse();
-        String result = word.equals(discord.toString()) ? "a Palindrome" : "not a Palindrome";
+        String result = word.contentEquals(discord) ? "a Palindrome" : "not a Palindrome";
         System.out.println("Your input word is " + result);
     }
 }
