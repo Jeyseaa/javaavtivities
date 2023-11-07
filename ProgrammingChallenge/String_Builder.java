@@ -10,7 +10,7 @@ public class String_Builder {
 
         StringBuilder strBuild = new StringBuilder(inputString);
 
-        System.out.println("The capacity of the StringBuilder for your input is " + strBuild.capacity());
+        System.out.println("The capacity of the StringBuilder for your input is: " + strBuild.capacity());
         System.out.println("The number of characters in the input is: " + strBuild.length());
     }
 }
