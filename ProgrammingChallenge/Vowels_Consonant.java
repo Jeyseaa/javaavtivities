@@ -1,31 +1,42 @@
 package ProgrammingChallenge;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Vowels_Consonant {
     public static void main(String[] args) {
-        String fullName = "John Carl Balatan";
+        Scanner scanner = new Scanner(System.in);
 
-        int vowelCount = 0;
-        int consonantCount = 0;
+        System.out.print("Please enter only a string or letters: ");
+        String inputString = scanner.nextLine().toLowerCase();
 
-        // Convert the full name to lowercase to make the comparison case-insensitive
-        fullName = fullName.toUpperCase();
+        if (inputString.isEmpty()) {
+            System.out.println("The Input given is empty");
+        } else if (!inputString.matches("^[a-zA-Z]*$")) {
+            System.out.println("Please enter only a string or letters.");
+        } else {
+            ArrayList<Character> vowels = new ArrayList<>();
+            ArrayList<Character> consonants = new ArrayList<>();
 
-        for (int i = 0; i < fullName.length(); i++) {
-            char c = fullName.charAt(i);
-
-            if (c >= 'A' && c <= 'Z') {
-                if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
-                    vowelCount++;
-                } else {
-                    consonantCount++;
+            for (int i = 0; i < inputString.length(); i++) {
+                char c = inputString.charAt(i);
+                if (isVowel(c)) {
+                    vowels.add(c);
+                } else if (isConsonant(c)) {
+                    consonants.add(c);
                 }
             }
-        }
 
-        System.out.println("Fullname: " + fullName);
-        System.out.println("Vowel Count: " + vowelCount);
-        System.out.println("Consonant Count: " + consonantCount);
+            System.out.println("Vowels: " + vowels + " (" + vowels.size() + ")");
+            System.out.println("Consonants: " + consonants + " (" + consonants.size() + ")");
+        }
+    }
+
+    public static boolean isVowel(char c) {
+        return "aeiou".indexOf(c) != -1;
+    }
+
+    public static boolean isConsonant(char c) {
+        return "bcdfghjklmnpqrstvwxyz".indexOf(c) != -1;
     }
 }
