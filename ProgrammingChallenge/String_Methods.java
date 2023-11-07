@@ -18,6 +18,6 @@ public class String_Methods {
 
 
 
-        System.out.println("Fullname: " + FirstName +" " + MiddleName + " " + LastName);
+        System.out.println("Your Full Name is: " + FirstName +" " + MiddleName + " " + LastName);
     }
 }
